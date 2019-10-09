@@ -1,0 +1,68 @@
+.nt-tabs_body {
+  width: 100%;
+  max-width: 1500rpx;
+  min-width: 640rpx;
+  height: 100%;
+  margin: 0 auto;
+
+  .pane_container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    .clearfix::before,
+    .clearfix::after {
+      content: "";
+      display: block;
+      height: 0;
+      line-height: 0;
+      visibility: hidden;
+      clear: both;
+    }
+    .pane_tabs {
+      display: flex;
+      align-items: center;
+      height: 80rpx;
+      padding: 0 40rpx;
+      margin-bottom: 10rpx;
+      font-size: 28rpx;
+      color: #333333;
+      border-bottom: 1px solid #F0F0F0;
+      .tab_item {
+        width: 100rpx;
+        height: inherit;
+        line-height: 80rpx;
+        text-align: center;
+      }
+      .tab_active {
+        position: relative;
+        text-align: center;
+        color: #6190E8;
+        .tab_underline {
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          display: block;
+          width: 80rpx;
+          height: 2rpx;
+          background: #6190E8;
+        }
+      }
+    }
+
+    .pane-content {
+      display: flex;
+      // width: 1000%;
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+      
+      .pane_01 {
+        float: left;
+        width: 100%;
+        height: 800rpx;
+      }
+    }
+    
+  }
+  
+}
