@@ -3,6 +3,15 @@ import { View, Text } from '@tarojs/components'
 import { AtButton, AtSearchBar, AtTabs, AtTabsPane } from 'taro-ui'
 import { NtTab, NtTabPane } from '../../components/highOrder/index'
 
+import { NbTar } from '../../components/business/index'
+
+// import { TabContext } from '../../context/index' 
+
+import { connect } from '@tarojs/redux'
+
+import { add, minus, asyncAdd } from '../../actions/actions'
+
+
 import './index.scss'
 
 export default class Index extends Component {
@@ -45,23 +54,24 @@ export default class Index extends Component {
 
   componentDidHide () { }
 
+  tabClick () {
 
-  handleClick (v) {
-    this.setState({
-      labelCurrent: v
-    })
   }
 
   render () {
     const { clientWidth } = this.state;
     const tabLists = [{
-      title: '关注'
+      title: '关注',
+      type: 'follow'
     },{
-      title: '沸点'
+      title: '沸点',
+      type: 'boiling'
     },{
-      title: '前端'
+      title: '前端',
+      type: 'front'
     },{
-      title: '后端'
+      title: '后端',
+      type: 'end'
     }]
 
 
@@ -69,13 +79,7 @@ export default class Index extends Component {
 
     return (
       <View className='book' id='book'>
-        <NtTab tabLists={tabLists} panelWidth={clientWidth} >
-          <NtTabPane>33</NtTabPane>
-          <NtTabPane>44</NtTabPane>
-          <NtTabPane>55</NtTabPane>
-          <NtTabPane>66</NtTabPane>
-
-        </NtTab>
+        <NbTar tabList={tabLists}></NbTar>
       </View>
     )
   }

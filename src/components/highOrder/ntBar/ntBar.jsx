@@ -34,7 +34,7 @@ export default class NtBar extends Component {
     this._isMoving = false
   }
 
-  componentWillMount () { 
+  componentWillMount () {
 
   }
 
@@ -69,11 +69,10 @@ export default class NtBar extends Component {
     let { _panelStyle, _tabStyle } = this.state;
 
     _panelStyle.transition = 'all 0.3s'
-    _tabStyle.transition = 'all 0.2s'
+    // _tabStyle.transition = 'all 0.3s'
 
     this.setState({
       _panelStyle,
-      _tabStyle
     })
 
   }
@@ -160,13 +159,16 @@ export default class NtBar extends Component {
   tabClick(id) {
     const { _panelWidth } = this;
 
+
+    this.props.onClick(...arguments);
+
     this._tabIndex = id
 
     this.addTransition()
 
-    this.setTranslateX(-id * _panelWidth)
+    // this.setTranslateX(-id * _panelWidth)
 
-    this.resetData()
+    // this.resetData()
 
   }
 
@@ -190,7 +192,6 @@ export default class NtBar extends Component {
     Object.assign(paneContentStyle, _panelStyle)
 
 
-    console.log(this.props.children, 'this.props.children');
 
     const tabItem = tabLists.map((item, idx) => {
       const tabCls = classNames({
@@ -230,7 +231,7 @@ export default class NtBar extends Component {
             onTouchEnd={this.touchEnd.bind(this)}
             onTouchMove={this.touchMove.bind(this)}
             >
-            {tabPanel}
+            {/* {tabPanel} */}
           </View>
         </View>
       </View>
