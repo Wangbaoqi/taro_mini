@@ -1,16 +1,7 @@
 import Taro, { Component } from '@tarojs/taro'
 import { View, Text } from '@tarojs/components'
-import { AtButton, AtSearchBar, AtTabs, AtTabsPane } from 'taro-ui'
-import { NtTab, NtTabPane } from '../../components/highOrder/index'
 
-import { NbTar, NbList } from '../../components/business/index'
-
-// import { TabContext } from '../../context/index' 
-
-import { connect } from '@tarojs/redux'
-
-import { add, minus, asyncAdd } from '../../actions/actions'
-
+import { NbTar } from '../../components/business/index'
 
 import './index.scss'
 
@@ -78,6 +69,7 @@ export default class Index extends Component {
       type: 'app'
     }]
 
+    console.log(this.props);
     
 
 
@@ -86,6 +78,7 @@ export default class Index extends Component {
       <View className='index' id='book'>
         <NbTar tabList={tabLists} clientWidth={clientWidth}>
         </NbTar>
+        <View>{this.props.counter.num}</View>
 
       </View>
     )

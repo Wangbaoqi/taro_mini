@@ -1,6 +1,6 @@
 import Taro, { Component } from '@tarojs/taro'
 import { View, Text } from '@tarojs/components'
-import './boiling.scss'
+import './infoList.scss'
 
 export default class InfoList extends Component {
 
@@ -20,7 +20,7 @@ export default class InfoList extends Component {
 
   render () {
     return (
-      <View className='InfoList'>
+      <View className='infoList'>
         {this.props.title}
       </View>
     )

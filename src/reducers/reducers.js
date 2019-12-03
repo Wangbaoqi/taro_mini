@@ -1,6 +1,6 @@
 
 
-import { ADD, MINUS, TABTYPE } from '../constant/constant'
+import { ADD, MINUS, TABTYPE } from '../constant/counter'
 
 const INITIAL_STATE = {
   num: 0

@@ -5,16 +5,34 @@ import { AtButton, AtSearchBar, AtTabs, AtTabsPane } from 'taro-ui'
 import { NtTab } from '../../components/highOrder/index'
 import './book.scss'
 
-export default class Index extends Component {
+import { connect } from '@tarojs/redux'
+
+import { add, minus, asyncAdd } from '../../actions/counter'
+
+
+@connect(({ counter }) => ({
+  counter
+}), (dispatch) => ({
+  add () {
+    dispatch(add())
+  },
+  dec () {
+    dispatch(minus())
+  },
+  asyncAdd () {
+    dispatch(asyncAdd())
+  }
+}))
+
+export default class Book extends Component {
 
   config = {
     navigationBarTitleText: '书籍'
   }
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.state = {
-      clientWidth: 0,
-      current: 0
+      
     }
 
   }
@@ -32,28 +50,19 @@ export default class Index extends Component {
   componentDidHide () { }
 
 
-  handleClick (value) {
-    this.setState({
-      current: value
-    })
-  }
 
   render () {
     
+    console.log(this.props);
 
-    const tabList = [{ title: '标签页1' }, { title: '标签页2' }, { title: '标签页3' }]
     return (
-      <AtTabs current={this.state.current} tabList={tabList} onClick={this.handleClick.bind(this)}>
-        <AtTabsPane current={this.state.current} index={0} >
-          <View style='padding: 100px 50px;background-color: #FAFBFC;text-align: center;' >标签页一的内容</View>
-        </AtTabsPane>
-        <AtTabsPane current={this.state.current} index={1}>
-          <View style='padding: 100px 50px;background-color: #FAFBFC;text-align: center;'>标签页二的内容</View>
-        </AtTabsPane>
-        <AtTabsPane current={this.state.current} index={2}>
-          <View style='padding: 100px 50px;background-color: #FAFBFC;text-align: center;'>标签页三的内容</View>
-        </AtTabsPane>
-      </AtTabs>
+      <View>
+
+        <Text>book</Text>
+        <View>{this.props.counter.num}</View>
+
+      </View>
+      
     )
   }
 }
