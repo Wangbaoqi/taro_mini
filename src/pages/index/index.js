@@ -3,7 +3,7 @@ import { View, Text } from '@tarojs/components'
 import { AtButton, AtSearchBar, AtTabs, AtTabsPane } from 'taro-ui'
 import { NtTab, NtTabPane } from '../../components/highOrder/index'
 
-import { NbTar } from '../../components/business/index'
+import { NbTar, NbList } from '../../components/business/index'
 
 // import { TabContext } from '../../context/index' 
 
@@ -29,6 +29,7 @@ export default class Index extends Component {
         { title: '关注' },
         { title: '前端' },
         { title: '后端' },
+        { title: 'flutter' },
       ],
       clientWidth: 0
 
@@ -72,14 +73,20 @@ export default class Index extends Component {
     },{
       title: '后端',
       type: 'end'
+    },{
+      title: 'flutter',
+      type: 'app'
     }]
 
+    
 
-    console.log( clientWidth, 'initbook');
 
     return (
-      <View className='book' id='book'>
-        <NbTar tabList={tabLists}></NbTar>
+
+      <View className='index' id='book'>
+        <NbTar tabList={tabLists} clientWidth={clientWidth}>
+        </NbTar>
+
       </View>
     )
   }

@@ -1,37 +1,76 @@
 
-.tabList {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  align-items: center;
-  height: 80rpx;
-  padding: 0 40rpx;
-  margin-bottom: 10rpx;
-  font-size: 28rpx;
-  font-weight: 400;
-  color: #333333;
-  border-bottom: 4rpx solid #F0F0F0;
-  .tab_item {
-    width: 100rpx;
-    height: inherit;
-    line-height: 80rpx;
-    text-align: center;
-  }
-  .tab_active {
-    position: relative;
-    text-align: center;
-    color: #6190E8;
-    .tab_underline {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      display: block;
-      width: 80rpx;
-      height: 4rpx;
-      background: #6190E8;
-    }
-  }
+
+.mine {
+  height: 900rpx;
 }
+
+.nt-tabs_body {
+  width: 100%;
+  max-width: 1500rpx;
+  min-width: 640rpx;
+  height: 100%;
+  margin: 0 auto;
+
+  .pane_container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    .pane_tabs {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      height: 80rpx;
+      padding: 0 40rpx;
+      margin-bottom: 10rpx;
+      font-size: 28rpx;
+      font-weight: 400;
+      color: #333333;
+      border-bottom: 4rpx solid #F0F0F0;
+      .tab_item {
+        width: 100rpx;
+        height: inherit;
+        line-height: 80rpx;
+        text-align: center;
+      }
+      .tab_active {
+        position: relative;
+        text-align: center;
+        color: #6190E8;
+        .tab_underline {
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          display: block;
+          width: 80rpx;
+          height: 4rpx;
+          background: #6190E8;
+        }
+      }
+    }
+
+    .pane-content {
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: flex;
+      // width: 1000%;
+      margin-top: 90rpx;
+      transform: translateX(0);
+      
+      .pane_01 {
+        // float: left;
+        width: 100%;
+        height: 800rpx;
+      }
+    }
+    
+  }
+  
+}
+
+

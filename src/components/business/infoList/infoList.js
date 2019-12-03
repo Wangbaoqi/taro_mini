@@ -1,12 +1,11 @@
 import Taro, { Component } from '@tarojs/taro'
 import { View, Text } from '@tarojs/components'
-import { AtButton } from 'taro-ui'
-import './search.scss'
+import './boiling.scss'
 
-export default class Index extends Component {
+export default class InfoList extends Component {
 
-  config = {
-    navigationBarTitleText: '首页'
+  constructor(props) {
+    super(props)
   }
 
   componentWillMount () { }
@@ -21,8 +20,8 @@ export default class Index extends Component {
 
   render () {
     return (
-      <View className='search'>
-        <Text>search!</Text>
+      <View className='InfoList'>
+        {this.props.title}
       </View>
     )
   }

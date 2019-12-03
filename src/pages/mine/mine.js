@@ -17,6 +17,7 @@ export default class Index extends Component {
   }
 
   constructor() {
+    super()
     this.state = {
       _panelStyle: {},
       _tabStyle: {},
@@ -24,8 +25,6 @@ export default class Index extends Component {
       _scrollLeft: '',
       _scrollRight: '',
       _scrollIntoView: '',
-
-
 
     }
 

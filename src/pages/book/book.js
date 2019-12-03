@@ -11,6 +11,7 @@ export default class Index extends Component {
     navigationBarTitleText: '书籍'
   }
   constructor() {
+    super()
     this.state = {
       clientWidth: 0,
       current: 0
