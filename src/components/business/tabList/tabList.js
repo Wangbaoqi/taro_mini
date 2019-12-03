@@ -39,7 +39,6 @@ export default class TabList extends Component {
   }
 
   componentWillMount() { 
-    console.log(this.props, 'props');
     
     this._count = this.props.tabList.length;
     this._distanceConf = 100/this.props.tabList.length*10;
@@ -60,36 +59,37 @@ export default class TabList extends Component {
   tabClick(item, id) {
     const { type = '' } = item
 
-    
+    const { _distanceConf } = this
+
     this.setState({
       _tabIndex: id
     })
+    this._tabIndex = id
 
+    this.removeTransition()
+
+    this.setTranslateX(-this._tabIndex * _distanceConf)
   }
 
   // 添加过渡
   addTransition () {
-    let { _panelStyle, _tabStyle } = this.state;
+    let { _panelStyle } = this.state;
 
-    _panelStyle.transition = 'all 0.2s'
-    _tabStyle.transition = 'all 0.2s'
+    _panelStyle.transition = 'all 0.4s'
 
     this.setState({
       _panelStyle,
-      _tabStyle
     })
 
   }
 
   removeTransition () {
-    let { _panelStyle, _tabStyle } = this.state;
+    let { _panelStyle } = this.state;
 
     _panelStyle.transition = 'none'
-    _tabStyle.transition = 'none'
 
     this.setState({
       _panelStyle,
-      _tabStyle
     })
 
   }
@@ -158,6 +158,10 @@ export default class TabList extends Component {
     this.setTranslateX(-this._tabIndex * _distanceConf)
 
     this.resetData()
+
+    this.setState({
+      _tabIndex: this._tabIndex
+    })
   }
 
 
@@ -165,8 +169,6 @@ export default class TabList extends Component {
     const {
       tabList = []
     } = this.props
-
-    console.log(this.props.children, 'render list');
 
     const { _tabIndex } = this.state;
 
