@@ -3,7 +3,7 @@ import Taro, { Component } from '@tarojs/taro'
 import { View, Text, Form } from '@tarojs/components'
 import classNames from 'classnames'
 
-import { AtButton } from 'taro-ui'
+import { AtButton } from 'taro-ui/'
 import { NtTab, NtTabPane } from '../../components/highOrder/index'
 import './mine.scss'
 

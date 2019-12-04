@@ -40,7 +40,30 @@ export default class Book extends Component {
   componentWillMount () { }
 
   componentDidMount () { 
+    wx.cloud.init()
+    const db = wx.cloud.database({
+      env: 'nate-front-o7l4u'
+    })
+
     
+    
+    db.collection('blog').get().then(res => {
+      // res.data 是一个包含集合中有权限访问的所有记录的数据，不超过 20 条
+      console.log(res, 'blog')
+    })
+
+
+    wx.cloud.callFunction({
+      // 云函数名称
+      name: 'getFoucsList',
+      // 传给云函数的参数
+      
+      success: function(res) {
+        console.log(res, 'cloud') // 3
+      },
+      fail: console.error
+    })
+
   }
 
   componentWillUnmount () { }

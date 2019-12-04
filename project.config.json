@@ -1,5 +1,6 @@
 {
-	"miniprogramRoot": "dist/",
+	"miniprogramRoot": "client/dist/",
+	"cloudfunctionRoot": "cloud/",
 	"projectname": "mini-air",
 	"description": "mini-air",
 	"appid": "wxc235d8ed87fe9fca",
@@ -23,6 +24,7 @@
 	"compileType": "miniprogram",
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
+	"cloudfunctionTemplateRoot": "cloudfunctionTemplate",
 	"condition": {
 		"search": {
 			"current": -1,
