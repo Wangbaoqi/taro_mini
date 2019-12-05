@@ -31,6 +31,7 @@
       font-weight: 400;
       color: #333333;
       border-bottom: 4rpx solid #F0F0F0;
+      background: #ffffff;
       .tab_item {
         width: 100rpx;
         height: inherit;
@@ -58,14 +59,13 @@
       top: 0;
       left: 0;
       display: flex;
-      // width: 1000%;
-      margin-top: 90rpx;
+      margin-top: 95rpx;
       transform: translateX(0);
       
       .pane_01 {
         // float: left;
         width: 100%;
-        height: 800rpx;
+        // height: 800rpx;
       }
     }
     

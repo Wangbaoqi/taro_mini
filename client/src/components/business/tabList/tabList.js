@@ -200,7 +200,7 @@ export default class TabList extends Component {
       
       const colors = ['red', 'blue', 'green', 'yellow', '#ffe564']
 
-      return <View className='pane_01' key={idx} style={{ background: colors[idx] }}>
+      return <View className='pane_01' key={idx}>
         <NbList title={item.title} />
       </View>
     })
