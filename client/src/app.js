@@ -24,6 +24,7 @@ class App extends Component {
       'pages/search/search',
       'pages/boiling/boiling',
       'pages/book/book',
+      'pages/auth/auth'
     ],
     window: {
       backgroundTextStyle: 'light',
@@ -71,10 +72,18 @@ class App extends Component {
 
   componentDidMount () {
 
-    Taro.getSystemInfo({
-      success: res => console.log(res)
+    Taro.getSystemInfo()
+      .then(res => console.log(res, 'info'))
+
+    Taro.login().then(res => {
+      console.log(res, 'login');
+      
+
     })
-      .then(res => console.log(res))
+
+    
+
+    
   }
 
   componentDidShow () {}

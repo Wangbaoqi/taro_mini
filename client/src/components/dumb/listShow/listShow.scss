@@ -1,0 +1,25 @@
+
+@import "~taro-ui/dist/style/components/icon.scss";
+
+
+
+
+.list-show {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30rpx 40rpx;
+  border-bottom: 2rpx solid rgba(178, 178, 178, 0.2);
+
+  .list-left {
+
+    .at-icon {
+      font-size: 40rpx;
+    }
+    .list-name {
+      margin-left: 20rpx;
+    }
+  }
+
+  
+}

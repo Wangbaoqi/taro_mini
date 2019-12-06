@@ -1,7 +1,10 @@
 @import "~taro-ui/dist/style/index.scss";
 
+@import "~taro-ui/dist/style/components/icon.scss";
 
 page {
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+  color: #2c3e50;
   background: #f6f6f6;
   font-size: 28rpx;
 }

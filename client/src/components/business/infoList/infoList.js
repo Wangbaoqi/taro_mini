@@ -34,8 +34,6 @@ export default class InfoList extends Component {
   render () {
     return (
       <View className='infoList'>
-        {this.props.title}
-
         <ScrollView
          className='scrollview'
          scrollY

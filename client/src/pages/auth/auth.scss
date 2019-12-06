@@ -1,0 +1,41 @@
+.auth-page {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background: #fff;
+  padding: 0 60rpx;
+  .auth-logo {
+    width: 200rpx;
+    height: 200rpx;
+    border-radius: 50%;
+    margin-top: 80rpx;
+  }
+
+  .auth-title {
+    font-size: 46rpx;
+    color: #4d91fb;
+    margin: 80rpx 0;
+  }
+
+  .auth-dec {
+    font-size: 28rpx;
+    color: #333333;
+  }
+
+  .auth-btn {
+    width: 400rpx;
+    background: #4d91fb;
+    border: 0;
+    color: #fff;
+    margin-top: 60rpx
+  }
+
+
+
+}
