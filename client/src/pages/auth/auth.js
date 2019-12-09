@@ -59,7 +59,7 @@ class Auth extends Component {
        
       }else {
         Taro.getUserInfo().then(res => {
-          console.log(res.userInfo, 'has authorize Userinfo');
+          console.log(res, 'has authorize Userinfo');
 
           Taro.setStorageSync('userInfo', res.userInfo)
          

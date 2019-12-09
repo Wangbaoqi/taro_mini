@@ -50,6 +50,13 @@ export default class Index extends Component {
 
   }
 
+  // share article 
+  handleArticleWrite() {
+    Taro.navigateTo({
+      url: '/pages/article/article'
+    })
+  }
+
   render () {
     const { clientWidth } = this.state;
     const tabLists = [{
@@ -78,7 +85,9 @@ export default class Index extends Component {
       <View className='index' id='book'>
         <NbTar tabList={tabLists} clientWidth={clientWidth}>
         </NbTar>
-        <View>{this.props.counter.num}</View>
+        <View className="index-write" onClick={this.handleArticleWrite.bind(this)}>
+          <View className="at-icon at-icon-edit write-icon"></View>
+        </View>
 
       </View>
     )

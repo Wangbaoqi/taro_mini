@@ -41,6 +41,10 @@
 		"game": {
 			"list": []
 		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
 		"miniprogram": {
 			"current": 1,
 			"list": [
@@ -56,6 +60,12 @@
 					"name": "pages/book/book",
 					"pathName": "pages/book/book",
 					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/article/article",
+					"pathName": "pages/article/article",
 					"scene": null
 				}
 			]

@@ -2,4 +2,24 @@
   .index-content {
     padding: 0 0rpx;
   }
+
+
+
+  .index-write {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 40rpx;
+    bottom: 160rpx;
+    width: 100rpx;
+    height: 100rpx;
+    background: royalblue;
+    border-radius: 50%;
+    color: #ffffff;
+
+    .write-icon {
+      font-size: 45rpx;
+    }
+  }
 }

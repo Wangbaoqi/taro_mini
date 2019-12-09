@@ -57,7 +57,12 @@ export default class Book extends Component {
       // 云函数名称
       name: 'getFoucsList',
       // 传给云函数的参数
-      
+      data: {
+        weRunData: wx.cloud.CloudID("28_ICS7AzmVLE9V1DBQWpHes5u4SkUsKbyFAUS96h0vXLCmB-E_7T1AaKQ2DBw"),
+        obj: {
+          shareInfo: wx.cloud.CloudID("28_ICS7AzmVLE9V1DBQWpHes5u4SkUsKbyFAUS96h0vXLCmB-E_7T1AaKQ2DBw"), // 非顶层字段的 CloudID 不会被替换，会原样字符串展示
+        }
+      },
       success: function(res) {
         console.log(res, 'cloud') // 3
       },

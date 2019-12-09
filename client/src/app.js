@@ -24,7 +24,8 @@ class App extends Component {
       'pages/search/search',
       'pages/boiling/boiling',
       'pages/book/book',
-      'pages/auth/auth'
+      'pages/auth/auth',
+      'pages/article/article'
     ],
     window: {
       backgroundTextStyle: 'light',
