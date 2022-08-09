@@ -9,6 +9,7 @@
     "css": "sass"
   },
   "scripts": {
+    "prepare": "husky install",
     "build:weapp": "taro build --type weapp",
     "build:swan": "taro build --type swan",
     "build:alipay": "taro build --type alipay",
@@ -56,6 +57,8 @@
   },
   "devDependencies": {
     "@babel/core": "^7.8.0",
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.5",
     "@tarojs/cli": "3.5.2",
     "@tarojs/webpack5-runner": "3.5.2",
@@ -77,6 +80,8 @@
     "webpack": "5.69.0"
   },
   "lint-staged": {
-    "*.{js,ts,tsx,jsx}": "eslint --cache"
+    "*.{js,ts,tsx,jsx}": [
+      "eslint --fix --quiet"
+    ]
   }
 }

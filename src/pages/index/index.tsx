@@ -15,7 +15,7 @@ export default class Index extends Component {
   componentDidHide () { }
 
   render() {
-    const a = 'dd'
+    const a = 'dddd'
     return (
       <View className='index'>
         <Text>Hello world!</Text>
