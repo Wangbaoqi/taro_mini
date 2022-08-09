@@ -1,0 +1,14 @@
+{
+  "extends": ["taro/react"],
+  "rules": {
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off",
+    // "no-unused-vars": ["error", {
+    //   "varIgnorePattern": "Taro|wx"
+    // }],
+    // "no-mixed-spaces-and-tabs": 2,
+    // "no-debugger": 2,
+    // "space-before-blocks": 2,
+    // "space-infix-ops": 2
+  }
+}
