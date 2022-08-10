@@ -1,25 +1,15 @@
-import { Component } from 'react'
-import { View, Text } from '@tarojs/components'
-import './index.scss'
+import { View, Text } from '@tarojs/components';
+import { Button } from '@antmjs/vantui';
 
-export default class Index extends Component {
+import './index.scss';
 
-  componentWillMount () { }
-
-  componentDidMount () { }
-
-  componentWillUnmount () { }
-
-  componentDidShow () { }
-
-  componentDidHide () { }
-
-  render() {
-    const a = 'ddpp';
-    return (
-      <View className='index'>
-        <Text>Hello world!</Text>
-      </View>
-    )
-  }
+export default function Index() {
+  return (
+    <View className="index">
+      <Text>Hello world!</Text>
+      <Button type="primary" block>
+        块级元素
+      </Button>
+    </View>
+  );
 }

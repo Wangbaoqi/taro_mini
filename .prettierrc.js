@@ -2,7 +2,7 @@ module.exports = {
   printWidth: 80,
   endOfLine: 'lf',
   // tab缩进大小,默认为2
-  tabWidth: 4,
+  tabWidth: 2,
   // 使用tab缩进，默认false
   useTabs: false,
   // 使用分号, 默认true
@@ -22,4 +22,4 @@ module.exports = {
   // avoid 能省略括号的时候就省略 例如x => x
   // always 总是有括号
   arrowParens: 'avoid'
-}
+};
