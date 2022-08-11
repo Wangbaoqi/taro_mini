@@ -1,0 +1,1 @@
+export { getSystemInfoSync } from './system';

@@ -2,6 +2,7 @@
   "extends": ["taro/react"],
   "rules": {
     "react/jsx-uses-react": "off",
+    "react/jsx-closing-bracket-location": "off",
     "react/react-in-jsx-scope": "off",
     "no-unused-vars": "warn",
     "no-mixed-spaces-and-tabs": "warn",
