@@ -18,7 +18,7 @@ module.exports = {
       {
         libraryName: '@antmjs/vantui',
         libraryDirectory: 'es',
-        style: true
+        style: name => `${name}/style/less`
       },
       '@antmjs/vantui'
     ]

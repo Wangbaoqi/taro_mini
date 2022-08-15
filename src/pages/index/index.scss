@@ -1,9 +1,12 @@
 
-
 .index {
 
   .banner {
     background-color: bisque;
-    height: 400px;
+    height: $banner-height;
+  }
+
+  .box {
+    --button-normal-border-radius: 40px;
   }
 }

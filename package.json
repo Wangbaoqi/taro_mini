@@ -36,7 +36,7 @@
   ],
   "author": "",
   "dependencies": {
-    "@antmjs/vantui": "^1.9.18",
+    "@antmjs/vantui": "latest",
     "@babel/runtime": "^7.7.7",
     "@tarojs/components": "3.5.2",
     "@tarojs/helper": "3.5.2",
@@ -63,6 +63,7 @@
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.5",
     "@tarojs/cli": "3.5.2",
     "@tarojs/webpack5-runner": "3.5.2",
+    "@tarojs/plugin-react-devtools": "3.5.3",
     "@types/react": "^18.0.0",
     "@types/webpack-env": "^1.13.6",
     "@typescript-eslint/eslint-plugin": "^5.20.0",
