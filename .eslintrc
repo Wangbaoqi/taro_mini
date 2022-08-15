@@ -8,6 +8,7 @@
     "no-mixed-spaces-and-tabs": "warn",
     "no-debugger": "error",
     "space-before-blocks": "warn",
-    "space-infix-ops": "warn"
+    "space-infix-ops": "warn",
+    "jsx-quotes": ["warn", "prefer-single"]
   }
 }

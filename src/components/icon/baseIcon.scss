@@ -1,0 +1,49 @@
+@import './style/variable.scss';
+
+.t-icon {
+
+  &--mini {
+    font-size: 10px * 2;
+  }
+
+  &--small {
+    font-size: 12px * 2;
+  }
+
+  &--medium {
+    font-size: 18px * 2;
+  }
+
+  &--large {
+    font-size: 20px * 2;
+  }
+
+  &--default {
+    color: $default-color;
+  }
+
+  &--primary {
+    color: $primary-color;
+  }
+
+  &--info {
+    color: $info-color;
+  }
+
+  &--success {
+    color: $success-color;
+  }
+
+  &--warning {
+    color: $warning-color;
+  }
+
+  &--danger {
+    color: $danger-color;
+  }
+
+  &--inherit {
+    font-size: inherit;
+    color: inherit;
+  }
+}
