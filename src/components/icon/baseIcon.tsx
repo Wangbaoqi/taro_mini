@@ -69,8 +69,6 @@ export function createIcon(name: string) {
 
 export function createCustomIcon() {
   return function (props: IconProps) {
-    console.log(props, 'props');
-
     return <TIcon {...props} />;
   };
 }

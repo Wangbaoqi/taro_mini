@@ -1,23 +1,27 @@
-import { Component } from 'react';
+import { Component, useMemo } from 'react';
 import { View, Text } from '@tarojs/components';
+import Taro, { useDidShow } from '@tarojs/taro';
+
 import './index.scss';
 
-export default class Service extends Component {
-  componentWillMount() {}
+const Service = () => {
+  const page = useMemo(() => Taro.getCurrentInstance().page, []);
 
-  componentDidMount() {}
+  useDidShow(() => {
+    // if (page && typeof page.getTabBar === 'function') {
+    //   const tabbar = page.getTabBar()
+    //   // @ts-ignore
+    //   tabbar?.setData({
+    //     selected: 2
+    //   })
+    // }
+  });
 
-  componentWillUnmount() {}
+  return (
+    <View className="service">
+      <Text>Hello Service!</Text>
+    </View>
+  );
+};
 
-  componentDidShow() {}
-
-  componentDidHide() {}
-
-  render() {
-    return (
-      <View className="service">
-        <Text>Hello serve!</Text>
-      </View>
-    );
-  }
-}
+export default Service;

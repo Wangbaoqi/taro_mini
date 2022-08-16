@@ -1,23 +1,28 @@
-import { Component } from 'react';
+import { useMemo } from 'react';
 import { View, Text } from '@tarojs/components';
+import Taro, { useDidShow } from '@tarojs/taro';
+// import CustomTabBar from '../../custom-tab-bar';
+
 import './index.scss';
 
-export default class Stroke extends Component {
-  componentWillMount() {}
+const Stroke = () => {
+  const page = useMemo(() => Taro.getCurrentInstance().page, []);
 
-  componentDidMount() {}
+  useDidShow(() => {
+    // if (page && typeof page.getTabBar === 'function') {
+    //   const tabbar = page.getTabBar()
+    //   // @ts-ignore
+    //   tabbar?.setData({
+    //     selected: 1
+    //   })
+    // }
+  });
 
-  componentWillUnmount() {}
+  return (
+    <View className="stroke">
+      <Text>Hello stroke!</Text>
+    </View>
+  );
+};
 
-  componentDidShow() {}
-
-  componentDidHide() {}
-
-  render() {
-    return (
-      <View className="stroke">
-        <Text>Hello stroke!</Text>
-      </View>
-    );
-  }
-}
+export default Stroke;
