@@ -21,10 +21,10 @@ const Index = () => {
   });
 
   return (
-    <View className="index">
+    <View className='index'>
       <NavBar>bar</NavBar>
-      <View className="banner"></View>
-      <View className="box">
+      <View className='banner'></View>
+      <View className='box'>
         <MyIcon />
       </View>
     </View>

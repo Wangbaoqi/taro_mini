@@ -39,7 +39,7 @@ const NavBar = (props: INavBar) => {
 
   return (
     <View className={barCls} style={barStyle}>
-      <View className="t-nav-bar__content">{children}</View>
+      <View className='t-nav-bar__content'>{children}</View>
     </View>
   );
 };

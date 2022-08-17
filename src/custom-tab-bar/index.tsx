@@ -13,9 +13,7 @@ const isEqualPath = (a: string, b: string) =>
   (a || '').replace(/^\//, '') === (b || '').replace(/^\//, '');
 
 const Index = () => {
-  const [active, setActive] = useState(0);
-
-  const [path, setPath] = useState(Taro.getCurrentInstance().router.path);
+  const [path, setPath] = useState(Taro.getCurrentInstance().router?.path);
 
   const tabList = [
     {
@@ -51,7 +49,7 @@ const Index = () => {
     wx.onAppRoute(function (res) {
       setPath(res.path);
     });
-  }, []);
+  }, [path]);
 
   const handleToggle = (i: number, url: string) => {
     Taro.switchTab({
@@ -61,23 +59,21 @@ const Index = () => {
   };
 
   return (
-    <View className="t-tab-bar">
-      <View className="t-tab-bar__border"></View>
-      <View className="t-tab-bar__content">
+    <View className='t-tab-bar'>
+      <View className='t-tab-bar__border'></View>
+      <View className='t-tab-bar__content'>
         {tabList.map((tab, i) => {
           // const checked = i === active;
           const checked = isEqualPath(path, tab.path);
-          console.log(checked);
-
           return (
             <View
-              className="t-tab-bar__item"
+              className='t-tab-bar__item'
               key={i}
               onClick={() => handleToggle(i, tab.path)}
             >
               <CustomIcon
                 name={tab.icon}
-                size="20px"
+                size='20px'
                 color={checked ? '#07c160' : ''}
               />
               <Text style={{ color: checked ? '#07c160' : '' }}>
@@ -150,20 +146,20 @@ class IndexC extends Component {
   render() {
     const { tabList, active } = this.state;
     return (
-      <View className="t-tab-bar">
-        <View className="t-tab-bar__border"></View>
-        <View className="t-tab-bar__content">
+      <View className='t-tab-bar'>
+        <View className='t-tab-bar__border'></View>
+        <View className='t-tab-bar__content'>
           {tabList.map((tab, i) => {
             const checked = i === active;
             return (
               <View
-                className="t-tab-bar__item"
+                className='t-tab-bar__item'
                 key={i}
                 onClick={this.handleToggle.bind(this, i, tab.path)}
               >
                 <CustomIcon
                   name={tab.icon}
-                  size="20px"
+                  size='20px'
                   color={checked ? '#50b2fa' : ''}
                 />
                 <View style={{ color: checked ? '#50b2fa' : '' }}>

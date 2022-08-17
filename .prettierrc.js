@@ -9,6 +9,7 @@ module.exports = {
   semi: true,
   // 使用单引号代替双引号
   singleQuote: true,
+  jsxSingleQuote: true,
   // 行尾逗号,默认none,可选 none|es5|all
   // es5 包括es5中的数组、对象
   // all 包括函数对象等所有可选

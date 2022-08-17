@@ -19,7 +19,7 @@ const Stroke = () => {
   });
 
   return (
-    <View className="stroke">
+    <View className='stroke'>
       <Text>Hello stroke!</Text>
     </View>
   );

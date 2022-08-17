@@ -19,7 +19,7 @@ const Mine = () => {
   });
 
   return (
-    <View className="mine">
+    <View className='mine'>
       <Text>Hello mine!</Text>
     </View>
   );

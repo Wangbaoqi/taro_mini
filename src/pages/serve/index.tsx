@@ -18,7 +18,7 @@ const Service = () => {
   });
 
   return (
-    <View className="service">
+    <View className='service'>
       <Text>Hello Service!</Text>
     </View>
   );
